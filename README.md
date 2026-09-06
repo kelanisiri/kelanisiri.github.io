@@ -4,7 +4,9 @@ Premium portfolio website for **Kelanisiri Aluminium & Steel Contracts** (Gonawa
 
 ## Live site
 
-https://kelanisiri.github.io/
+https://kelanisiri123-web.github.io/
+
+> To use `https://kelanisiri.github.io/` instead, rename the GitHub username (or create an organization) to **kelanisiri**, then create/move this site into a `kelanisiri.github.io` repository.
 
 ## Local development
 
@@ -29,4 +31,4 @@ Then run `npm run process-images` (also runs automatically before `dev` / `build
 
 ## Deploy
 
-Pushes to `main` on `kelanisiri/kelanisiri.github.io` publish via GitHub Pages.
+Pushes to `main` publish via GitHub Pages Actions.
