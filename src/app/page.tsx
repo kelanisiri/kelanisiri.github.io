@@ -1,6 +1,5 @@
 import { About } from "@/components/About";
 import { Contact } from "@/components/Contact";
-import { FeaturedProjects } from "@/components/FeaturedProjects";
 import { Footer } from "@/components/Footer";
 import { Gallery } from "@/components/Gallery";
 import { Hero } from "@/components/Hero";
@@ -23,7 +22,6 @@ export default function HomePage() {
         <Hero />
         <About accentImage={aboutImage} />
         <WhyChooseUs />
-        <FeaturedProjects items={gallery.featured} />
         <Gallery categories={gallery.categories} images={gallery.images} />
         <Contact />
       </main>
