@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   title: "Kelanisiri Aluminium & Steel Contracts | Aluminium & Steel Fabrication",
   description: site.description,
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL || "https://kelanisiri123-web.github.io/",
+    process.env.NEXT_PUBLIC_SITE_URL || "https://kelanisiri.github.io/",
   ),
   openGraph: {
     title: "Kelanisiri Aluminium & Steel Contracts | Aluminium & Steel Fabrication",
