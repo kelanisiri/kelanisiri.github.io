@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Barlow, Manrope } from "next/font/google";
 import { RevealObserver } from "@/components/RevealObserver";
 import { site } from "@/data/site";
+import { assetPath } from "@/lib/paths";
 import "./globals.css";
 
 const display = Barlow({
@@ -21,7 +22,9 @@ const sans = Manrope({
 export const metadata: Metadata = {
   title: "Kelanisiri Aluminium & Steel Contracts | Aluminium & Steel Fabrication",
   description: site.description,
-  metadataBase: new URL("https://kelanisiri.github.io/"),
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL || "https://kelanisiri123-web.github.io/",
+  ),
   openGraph: {
     title: "Kelanisiri Aluminium & Steel Contracts | Aluminium & Steel Fabrication",
     description: site.description,
@@ -37,8 +40,8 @@ export const metadata: Metadata = {
     images: [site.logo],
   },
   icons: {
-    icon: "/favicon.png",
-    apple: "/favicon.png",
+    icon: assetPath("/favicon.png"),
+    apple: assetPath("/favicon.png"),
   },
   keywords: [
     "Kelanisiri",
