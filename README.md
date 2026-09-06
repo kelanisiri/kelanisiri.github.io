@@ -4,7 +4,7 @@ Premium portfolio website for **Kelanisiri Aluminium & Steel Contracts** (Gonawa
 
 ## Live site
 
-https://kelanisiri123-web.github.io/kelanisiri123-web/
+https://kelanisiri.github.io/
 
 ## Local development
 
@@ -29,4 +29,4 @@ Then run `npm run process-images` (also runs automatically before `dev` / `build
 
 ## Deploy
 
-Pushes to `main` build and publish via GitHub Pages (Actions).
+Pushes to `main` on `kelanisiri/kelanisiri.github.io` publish via GitHub Pages.

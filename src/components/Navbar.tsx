@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { nav, site } from "@/data/site";
+import { assetPath } from "@/lib/paths";
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -37,7 +38,7 @@ export function Navbar() {
       >
         <a href="#home" className="flex items-center gap-3 min-w-0">
           <Image
-            src={site.logo}
+            src={assetPath(site.logo)}
             alt={`${site.name} logo`}
             width={scrolled ? 48 : 56}
             height={scrolled ? 48 : 56}

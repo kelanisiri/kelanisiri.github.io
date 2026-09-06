@@ -37,7 +37,15 @@ jobs:
         env:
           GITHUB_PAGES: "true"
           GITHUB_REPOSITORY: ${{ github.repository }}
-        run: npm run build
+        run: |
+          REPO_NAME="${GITHUB_REPOSITORY##*/}"
+          if [[ "$REPO_NAME" == *.github.io ]]; then
+            export NEXT_PUBLIC_BASE_PATH=""
+          else
+            export NEXT_PUBLIC_BASE_PATH="/$REPO_NAME"
+          fi
+          echo "Building with NEXT_PUBLIC_BASE_PATH='${NEXT_PUBLIC_BASE_PATH}'"
+          npm run build
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3

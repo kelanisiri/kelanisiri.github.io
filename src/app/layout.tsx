@@ -21,7 +21,7 @@ const sans = Manrope({
 export const metadata: Metadata = {
   title: "Kelanisiri Aluminium & Steel Contracts | Aluminium & Steel Fabrication",
   description: site.description,
-  metadataBase: new URL("https://kelanisiri123-web.github.io/kelanisiri123-web/"),
+  metadataBase: new URL("https://kelanisiri.github.io/"),
   openGraph: {
     title: "Kelanisiri Aluminium & Steel Contracts | Aluminium & Steel Fabrication",
     description: site.description,

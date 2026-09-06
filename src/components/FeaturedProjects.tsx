@@ -1,6 +1,7 @@
 import Image from "next/image";
 import type { GalleryImage } from "@/lib/gallery";
 import { getCategoryTitle } from "@/lib/gallery";
+import { assetPath } from "@/lib/paths";
 
 export function FeaturedProjects({ items }: { items: GalleryImage[] }) {
   if (!items.length) return null;
@@ -44,7 +45,7 @@ export function FeaturedProjects({ items }: { items: GalleryImage[] }) {
                 className={`reveal group relative overflow-hidden rounded-xl bg-mist min-h-[220px] ${spans[i]}`}
               >
                 <Image
-                  src={item.full}
+                  src={assetPath(item.full)}
                   alt={item.alt}
                   fill
                   sizes={

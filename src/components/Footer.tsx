@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { nav, site } from "@/data/site";
+import { assetPath } from "@/lib/paths";
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -11,7 +12,7 @@ export function Footer() {
           <div>
             <div className="flex items-center gap-3">
               <Image
-                src={site.logo}
+                src={assetPath(site.logo)}
                 alt={`${site.name} logo`}
                 width={52}
                 height={52}

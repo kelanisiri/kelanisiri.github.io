@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { aboutCopy, site } from "@/data/site";
+import { assetPath } from "@/lib/paths";
 
 type Props = {
   accentImage?: string;
@@ -46,7 +47,7 @@ export function About({ accentImage }: Props) {
             <div className="relative col-span-12 sm:col-span-7 overflow-hidden rounded-xl bg-mist aspect-[3/4] min-h-[280px] shadow-[var(--shadow)]">
               {accentImage ? (
                 <Image
-                  src={accentImage}
+                  src={assetPath(accentImage)}
                   alt="Completed aluminium pantry work by Kelanisiri Aluminium & Steel Contracts"
                   fill
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 420px"

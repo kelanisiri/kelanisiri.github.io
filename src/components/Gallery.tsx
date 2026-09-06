@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import type { GalleryCategory, GalleryImage } from "@/lib/gallery";
+import { assetPath } from "@/lib/paths";
 
 type Props = {
   categories: GalleryCategory[];
@@ -121,7 +122,7 @@ export function Gallery({ categories, images }: Props) {
               >
                 <div className="gallery-frame">
                   <Image
-                    src={img.thumb}
+                    src={assetPath(img.thumb)}
                     alt={img.alt}
                     fill
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -185,7 +186,7 @@ export function Gallery({ categories, images }: Props) {
             <div className="relative w-full max-h-[75svh] flex items-center justify-center bg-transparent">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src={active.full}
+                src={assetPath(active.full)}
                 alt={active.alt}
                 className="max-h-[75svh] w-auto max-w-full object-contain rounded-md shadow-2xl"
               />

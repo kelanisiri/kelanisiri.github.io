@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { site } from "@/data/site";
+import { assetPath } from "@/lib/paths";
 
 /** Sharp stock hero visual — blue/white aluminium & glass architecture */
 const HERO_STOCK = {
@@ -24,7 +25,7 @@ export function Hero() {
         <div className="text-white">
           <div className="inline-flex items-center gap-3 mb-7">
             <Image
-              src={site.logo}
+              src={assetPath(site.logo)}
               alt={`${site.name} logo`}
               width={88}
               height={88}
@@ -80,7 +81,7 @@ export function Hero() {
           <div className="absolute -inset-4 rounded-2xl bg-sky/20 blur-2xl opacity-50" aria-hidden />
           <figure className="relative overflow-hidden rounded-xl border border-white/15 shadow-[0_30px_80px_rgba(0,0,0,0.35)] bg-navy-deep/40 aspect-[4/5] sm:aspect-[5/4] lg:aspect-[4/5]">
             <Image
-              src={HERO_STOCK.src}
+              src={assetPath(HERO_STOCK.src)}
               alt={HERO_STOCK.alt}
               fill
               priority
